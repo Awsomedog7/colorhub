@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Hue Viewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .color-container {
+      display: inline-block;
+      width: 200px;
+      padding: 10px;
+    }
+
+    .color-box {
+      width: 150px;
+      height: 100px;
+      border: 1px solid #333;
+      border-radius: 5px;
+    }
+
+    /* Flexbox for organizing color boxes in rows */
+    .color-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #hueVariationsContainer {
+      margin-top: 0px;
+    }
+
+    #darkVariationsContainer,
+    #brightVariationsContainer {
+      margin-top: 0px;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.2/chroma.min.js"></script>
+</head>
+<body>
+  <h1>ColorHub</h1>
+
+  <div class="color-container">
+    <h2>Enter a Color:</h2>
+    <input type="text" id="colorInput" value="#FF0000">
+  </div>
+
+  <!-- Separate container div for hue variations -->
+  <div id="hueVariationsContainer" class="color-row"></div>
+
+  <br><br>
+
+  <!-- Separate container divs for dark and bright variations -->
+  <div id="darkVariationsContainer" class="color-row"></div>
+  <div id="brightVariationsContainer" class="color-row"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
